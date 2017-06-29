@@ -37,7 +37,7 @@ efit=custom.fit(e, dist=list(Sci=cptSci, Work=cptWork, Math=cptMath, Eff=cptEff,
 et=compile(as.grain(efit))
 
 # net stores our evidence, for example Stat=A, or Math=B, Sci=Like
-net = setEvidence(et, c("Math", "Sci"), c("B", "Like"))
+net = setEvidence(et, c("Math", "Sci"), c("A", "Like"))
 #net = setEvidence(et, c("Stat"), c("A"))
 
 # how likely is this evidence to observe?
@@ -45,3 +45,4 @@ pEvidence(net)
 
 # given the evidence, what is P(Stat)
 querygrain(net, nodes=c("Stat"))
+

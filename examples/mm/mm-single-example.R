@@ -8,7 +8,7 @@ rm(list=ls())
 # of the following colors:
 # this will double as both labels and as colors for the bars:
 mvl=c("red", "blue", "green", "yellow", "orange", "brown");
-mv =c(   4,      5,       3,        2,        1,       3)
+mv =c(   11,      9,       7,        9,        14,       6)
 
 # associate the color names with the color counts
 names(mv) = mvl

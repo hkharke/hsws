@@ -60,9 +60,9 @@ str(data$Height)
 # How do you get the whole row instead?
 # What happens (try this last) if you omit one of the =
 # in the ==? Can you guess first?
-data$Height[data$Height=74]
+#data$Height[data$Height==7.000000e+01]
 
-data$Height=74
+#data$Height>7.000000e+01
 # now what Heights are present in your dataset?
 
 # --------------------------------
@@ -74,3 +74,4 @@ data$Height=74
 # List names of students old enough to drive
 # Convert all heights to centimeters, output a data frame
 #   that contains name, height in cm, school. One inch is 2.54 cm.
+view(data)

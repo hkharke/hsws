@@ -42,12 +42,11 @@
 
 # We often need to find out about the possible values of columns in a data frame. Depending on the
 # datatype of the column, we have different functions to use: 
-#   - levels(), for categorical (factor) data
 #   - unique() for numeric data
 
 # Load the Cars93 dataset from the MASS library:
 library(MASS)
-car = Cars93
+car = Cars93u
 
 # a. Print the structure of the Cars93 data frame. 
 # What are the levels of car Type? of DriveTrain?
@@ -156,7 +155,7 @@ s = data.frame(Gender=survey$Sex,
 # which(), range(), and summary() will be useful for the following questions:			         
 			          
 # a. What is the age range for females? For males? Tip: use the which() function.
-
+#range(s[which(s$Gender=="Female"),]$Age)
 # b. How many subjects reported their height in Metric units, how many in Imperial units, 
 # and how many did not specify units?
 # (This is a good application for the summary() function.)

@@ -68,8 +68,13 @@ drivingTest(age);
 #   kilometers = (8/5) * miles
 # 
 # Test the function with the following vector, and print the results.
-miles = c(50, 100, 200, 275)
-
+miles = c(50)
+toKilom=function(miles){
+  k=(8/5)*miles
+  return(k)
+}
+toKilom(miles);
+class(toKilom(miles))
 # What is the type (class) of the output, given the input vector miles?
 
 # What is the type (class) of the output if you supply a single numeric value?
@@ -91,7 +96,10 @@ miles = c(50, 100, 200, 275)
 #         c(mean=avg, stdDev=sd)
 #
 library(MASS) # loads the dataset called "mammals"
-
+mean(mammals$body)
+sd(mammals$body)
+mean(mammals$brain)
+sd(mammals$brain)
 # ------------------------------
 
 # 4. apply() functions
@@ -103,9 +111,7 @@ library(MASS) # loads the dataset called "mammals"
 # You can use the apply() family on a native R function, on a function you wrote yourself.
 
 # a. First, create the sample dataset of US car data by running the following:
-data(car.test.frame, package = "rpart")
-US = car.test.frame[car.test.frame$Country=="USA", ]    # Only use American Cars
-US = droplevels(US[ ,c(1,4,6:8)])                       # Only use specified columns
+
 
 # b. Call head(), View(), or str() on the US dataset, to get a sense of the contents.
 # How many columns does it have? What are their types?
